@@ -1,0 +1,20 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Sample data: Task Sizes (in CPU cycles) and Completion Times (in seconds)
+task_sizes = np.array([2, 4, 6, 8, 10])  # Example task sizes
+completion_times = np.array([0.5, 1.0, 1.5, 2.0, 2.5])  # Simulated completion times
+
+# Create bar graph
+plt.figure(figsize=(8, 5))
+plt.bar(task_sizes, completion_times, color="blue", alpha=0.7)
+
+# Labels and title
+plt.xlabel("Task Size (CPU Cycles)")
+plt.ylabel("Completion Time (Seconds)")
+plt.title("Task Completion Time vs. Task Size")
+plt.xticks(task_sizes)
+plt.grid(axis="y", linestyle="--", alpha=0.6)
+
+# Show the plot
+plt.show()
